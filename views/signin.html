@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign in</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script>
+		function validate() {
+			var pwd=document.signin.pwd.value;
+			var pwd2=document.signin.pwd2.value;
+			if(pwd!=pwd2){
+				alert("Please re-enter correct password");
+				return false;
+			}
+			var num=document.signin.numb.value;
+			if(!num.match(/^[1-9]{1}[0-9]{9}$/)){
+				alert("Please enter a valid number");
+				return false;
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<div class="signin-form">
+		<h1>Sign in</h1><br>
+		<form action="auth/signin" name="signin" method="post" onsubmit="return validate()">
+			<p>User Name</p>
+			<input type="text" name="user" placeholder="User Name" required><br><br>
+			<p>Roll No</p>
+			<input type="text" name="rollNo" placeholder="Roll number" required><br><br>
+			<p>Password</p>
+			<input type="password" name="pwd" placeholder="Password" required>
+			<br><br>
+			<p>Confirm Password</p>
+			<input type="password" name="pwd2" placeholder="Confirm Password" required>
+			<br><br>
+			<p>Mobile no</p>
+			<input type="tel" name="numb" placeholder="Mobile Number" required>
+			<br><br>
+			<p>already have an account? click <a href="auth/log_in">here</a> to login</p>
+			<button type="submit">Sign in</button>
+		</form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        .column {
+          float: left;
+          padding: 10px;
+        }
+        .left {
+          width: 75%;
+        }        
+        .right {
+          width: 25%;
+        }
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        td,th{
+          padding:15px;
+        }
+        table{
+          margin-top: 80px;
+          border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="column left" >
+            <h1>Your Cart Products</h1>
+            <hr>
+        </div>
+        <div class="column right">
+            <table>
+                <tr>
+                    <th>Price Details</th><th></th>
+                </tr>
+                <tr>
+                    <td>Amount Payable</td>
+                    <td>₹0</td>
+                </tr>
+                <tr>
+                   <td><button style="background-color:red ;color: white;">Clear cart</button>
+                    <button style="background-color:green ;color:white">Place order</button></td> 
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
